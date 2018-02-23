@@ -13,7 +13,9 @@ class PresenterServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/../../config/presenters.php' => config_path('presenters.php'),
+        ]);
     }
 
     /**
