@@ -4,7 +4,8 @@
     "keywords": [
         "laravel",
         "laravel-plugin",
-        "presenter"
+        "presenter",
+        "view-presenter"
     ],
     "authors": [{
         "name": "Corey Coburn",
