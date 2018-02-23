@@ -1,7 +1,11 @@
 {
     "name": "coburncodes/presenter",
     "description": "A presenter package for Laravel 5.5+ based off of the package by Laracasts",
-    "type": "laravel, laravel-plugin",
+    "keywords": [
+        "laravel",
+        "laravel-plugin",
+        "presenter"
+    ],
     "authors": [{
         "name": "Corey Coburn",
         "email": "corey@coburn.codes",
