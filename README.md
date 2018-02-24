@@ -66,5 +66,21 @@ class UserPresenter extends Presenter
 }
 ```
 
+### Implement in your view
+Add a `presents` method to your eloqent model as shown below. Before integrating this package you might write:
+``` php
+public function index()
+{
+    return Auth::user()->first_name . ' ' . Auth::user()->last_name;
+}
+```
+Using this package, you add the `present()` method plus the method name you used in your presenter.
+``` php
+public function index()
+{
+    return Auth::user()->present()->fullName;
+}
+```
+
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
