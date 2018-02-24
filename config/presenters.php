@@ -3,14 +3,13 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Namespace
+    | Presenters folder
     |--------------------------------------------------------------------------
     |
-    | This is the default presenter namespace for your view presenters. If you
-    | changed your app namespace and / or changed your path to presenters
-    | folder, update your namespace here.
+    | This is the default presenters folder. If you would like to override it,
+    | change the folder config to the path/to/your/presenters/folder.
     |
     */
 
-    'namespace' => 'App\Presenters',
+    'folder' => 'Presenters',
 ];
