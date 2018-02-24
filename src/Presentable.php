@@ -10,6 +10,7 @@ use Coburncodes\Presenter\Exceptions\PresenterException;
  */
 trait Presentable
 {
+    protected $folder = 'Presenters';
     protected $presenter;
     protected $presenterInstance;
 
@@ -24,9 +25,13 @@ trait Presentable
      */
     public function present()
     {
-        $this->presenter = (Config::has('presenters.namespace')) ?
-            config('presenters.namespace') . '\\' . class_basename($this) . 'Presenter' :
-            'App\Presenters\\' . class_basename($this) . 'Presenter';
+        $namespace = app()->getNamespace();
+
+        if (Config::has('presenters.folder')) {
+            $this->folder = config('presenters.folder');
+        }
+
+        $this->presenter = $namespace . $this->folder . '\\' . class_basename($this) . 'Presenter';
 
         if (!class_exists($this->presenter)) {
             throw new PresenterException('Invalid Presenter class. Use convention i.e. UserPresenter. Yours was: ' . $this->presenter);

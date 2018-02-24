@@ -3,7 +3,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Presenters
+    | Namespace
     |--------------------------------------------------------------------------
     |
     | This is the default presenter namespace for your view presenters. If you
