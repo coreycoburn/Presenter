@@ -15,6 +15,16 @@ You can install the package via composer:
 $ composer require coburncodes/presenter
 ```
 
+### Config file
+A config file can be published if you would like to change the default location of where the presenters are stored. By default, the view presenters are stored in the `Presenters` directory in the app root. Simply publish the config file by running:
+``` bash
+$ php artisan vendor:publish
+```
+Find the presenter vendor
+``` bash
+Provider: Coburncodes\Presenter\Providers\PresenterServiceProvider
+```
+
 ## Usage
 ### Add trait to model:
 To implement a view Presenter to a model add the `presentable` trait to your model.
@@ -54,17 +64,6 @@ class UserPresenter extends Presenter
         return $this->first_name . ' ' . $this->last_name;
     }
 }
-```
-
-
-### Config file
-A config file can be published if you would like to change the default location of where the presenters are stored. By default, the view presenters are stored in the `Presenters` directory in the app root. Simply publish the config file by running:
-``` bash
-$ php artisan vendor:publish
-```
-Find the presenter vendor
-``` bash
-Provider: Coburncodes\Presenter\Providers\PresenterServiceProvider
 ```
 
 ## License
