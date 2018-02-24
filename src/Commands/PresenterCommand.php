@@ -18,7 +18,7 @@ class PresenterCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Create a view presenter for your model.';
+    protected $description = 'Create a view presenter for your model';
 
     /**
      * Create a new command instance.
